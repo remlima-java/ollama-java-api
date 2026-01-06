@@ -1,11 +1,11 @@
-package br.dev.rti.ai.local.controller;
+package rti.system.dev.ollamajavaapi.controller;
 
-import br.dev.rti.ai.local.service.interfaces.OllamaChatService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import rti.system.dev.ollamajavaapi.service.impl.OllamaChatServiceImpl;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 @Slf4j
 public class OllamaController {
 
-    private final OllamaChatService ollamaChatService;
+    private final OllamaChatServiceImpl ollamaChatService;
 
     @PostMapping(value = "/generate", produces =  MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CompletableFuture<String>> getGenerateOllamaFormatted(@RequestBody String request) {

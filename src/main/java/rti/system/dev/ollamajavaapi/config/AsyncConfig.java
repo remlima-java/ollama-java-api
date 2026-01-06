@@ -9,7 +9,6 @@ public class AsyncConfig implements WebMvcConfigurer {
 
     @Override
     public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
-        // Define o tempo limite para requisições assíncronas em milissegundos (30 segundos)
-        configurer.setDefaultTimeout(30000);
+        configurer.setDefaultTimeout(90000);
     }
 }

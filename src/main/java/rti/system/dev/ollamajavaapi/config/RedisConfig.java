@@ -1,4 +1,4 @@
-package br.dev.rti.ai.local.config;
+package rti.system.dev.ollamajavaapi.config;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
@@ -32,7 +32,7 @@ public class RedisConfig {
     public CacheManager cacheManager(RedisConnectionFactory connectionFactory) {
         return RedisCacheManager.builder(connectionFactory)
                 .cacheDefaults(RedisCacheConfiguration.defaultCacheConfig()
-                        .entryTtl(Duration.ofHours(2)) // Cache por 2 horas
+                        .entryTtl(Duration.ofHours(8)) // Cache por 8 horas
                         .disableCachingNullValues())
                 .build();
     }

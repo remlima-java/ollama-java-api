@@ -1,4 +1,4 @@
-package br.dev.rti.ai.local.config;
+package rti.system.dev.ollamajavaapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
